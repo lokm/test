@@ -1,0 +1,30 @@
+h3
+{color:red;
+text-align: center;}
+
+h2
+{color: red;
+text-align: center;}
+
+p
+{color: white;
+text-align: center;}
+
+ul
+{color: white;
+text-align: center;}
+
+ol
+{color: white;
+text-align: center;}
+
+body
+{background-image: url("images/pop.jpg");
+background-attachment: fixed;}
+
+@font-face 
+{font-family: 'New Athletic M54';
+src: url('fonts/New Athletic M54.TTF');}
+
+p
+{font-family: 'New Athletic M54';}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Bienvenue sur la page 2 !</title>
+<link rel="stylesheet" href="style2.css" />
+</head>
+
+<h3>On va parler ici du CSS</h3>
+
+
+<p>La ligne de commande a placer dans un autre dossier enregistrer sous .css est:</p>
+<p>&lt;link rel="stylesheet" href="style.css" /&gt;</p>
+<p>Evidemment elle doit être enregistré sous le nom de: "style.css"</p>
+<h3>Colorer un titre ou un paragrâphe en bleue (ou autre...)</h3>
+<p>p<br />{Color: Blue<br />}</p>
+<p>Pour paragraphe et </p>
+<p>h1<br />{color:blue<br />
+}
+<p>Pour les titres les plus gros par exemple.</p>
+<h3>Comment faire pour que certains paragraphes seulement soient écrits d'une manière différente ?</h3>
+<ul><li>l'attribut class;</li>
+
+<li>l'attribut id.</li></ul>
+
+<h3>Exemple:</h3>
+<p>&lt;p class="introduction">Bonjour et bienvenue sur mon site !&gt;</p>
+<p>Maintenant que c'est fait, votre paragraphe est identifié. Il a un nom :introduction. Vous allez pouvoir réutiliser ce nom dans le fichier CSS pour dire : « Je veux que seules les balises qui ont comme nom 'introduction' soient affichées en bleu ».
+
+Pour faire cela en CSS, indiquez le nom de votre classe en commençant par un point, comme ci-dessous :<br />
+
+.introduction
+{
+    color: blue;
+}</p>
+<h3>On change la taille du texte !</h3>
+<p> Tapez:  p <br />{font-size: 40px;}</p>
+<p> Et vous aurrait la taille de votre paragraphe en 40px !</p>
+<p>Vous pouvez également écrire avec des tailles relatives! Exemple:</p>
+<ul><li>xx-small: minuscule ;</li>
+	<li>x-small: très petit ;</li>
+	<li>small: petit ;</li>
+	<li>medium: moyen ;</li>
+	<li>large: grand ;</li>
+	<li>x-large: très grand ;</li>
+	<li>xx-large: euh… gigantesque.</li>
+</ul>
+<h3>La police</h3>
+<p>Voici une liste de polices qui fonctionnent bien sur la plupart des navigateurs :</p>
+<ul><li>Arial ;</li>
+	<li>Arial Black ;</li>
+	<li>Comic Sans MS ;</li>
+	<li>Courier New ;</li>
+	<li>Georgia ;</li>
+	<li>Impact </li>
+	<li>Times New Roman ;</li>
+	<li>Trebuchet MS ;</li>
+	<li>Verdana</li>
+</ul>
+<p>On écrit une police avec : font-family</p>
+<h3>L'alignement</h3>
+<p>Le langage CSS nous permet de faire tous les alignements connus : à gauche, centré, à droite et justifié.
+
+C'est tout simple. On utilise la propriété "text-align" et on indique l'alignement désiré :</p>
+<ul><li>left: le texte sera aligné à gauche (c'est le réglage par défaut).</li>
+	<li>center: le texte sera centré.</li>
+	<li>right: le texte sera aligné à droite.</li>
+	<li>justify: le texte sera « justifié ». Justifier le texte permet de faire en sorte qu'il prenne toute la largeur possible sans laisser d'espace blanc à la fin des lignes. Les textes des journaux, par exemple, sont toujours justifiés.</li>
+</ul>
+<h3>Les flottants</h3>
+<p>Le CSS nous permet de faire flotter un élément autour du texte. On dit aussi qu'on fait un « habillage ».</p>
+<p>J'imagine que, maintenant, la question qui vous brûle les lèvres est : « Mais quelle est donc la propriété magique qui fait flotter ? ».
+La réponse est…float(« flottant » en anglais). Cette propriété peut prendre deux valeurs très simples :</p>
+<ul><li>left: l'élément flottera à gauche.</li>
+	<li>right: l'élément flottera… à droite ! Oui, bravo.</li></ul>
+	<h3>Faire flotter une image</h3>
+		<p>Nous allons apprendre ici à faire flotter une image. Voici le code HTML que nous devons taper dans un premier temps :</p>
+
+<p>&lt;img src="flash.gif" class="imageflottante" alt="Image flottante" /&gt;</p><br />
+<p>Ceci est un texte normal de paragraphe, écrit à la suite de l'image et qui l'habillera car l'image est flottante.</p>
+<p>Voici le seul bout de code CSS qu'on ait besoin de taper, qui permet de faire flotter l'image à gauche :
+
+.imageflottante
+{
+    float: left;
+}</p>
+<p>Il existe en fait une propriété CSS qui permet de dire : « Stop, ce texte doit être en-dessous du flottant et non plus à côté ». C'est la propriété clear, qui peut prendre ces trois valeurs :</p>
+<ul><li>left: le texte se poursuit en-dessous après unfloat: left;</li>
+	<li>right: le texte se poursuit en-dessous après unfloat: right;</li>
+	<li>both: le texte se poursuit en-dessous, que ce soit après unfloat: left;ou après unfloat: right;.</li>
+</ul>
+<h3>Appliquer une image de fond</h3>
+<p>La propriété permettant d'indiquer une image de fond est background-image. Comme valeur, on doit renseigner url("nom_de_l_image.png"). Par exemple :<br />
+
+body
+{
+    background-image: url("neige.png");
+}</p>
+<p>Attention lorsque vous écrivez une adresse en relatif dans le fichier CSS ! L'adresse de l'image doit être indiquée par rapport au fichier.css et non pas par rapport au fichier.html. Pour simplifier les choses, je vous conseille de placer l'image de fond dans le même dossier que le fichier.css (ou dans un sous-dossier)</p>
+
+<h3>Options disponibles pour l'image de fond</h3>
+
+<p>On peut compléter la propriétébackground-imageque nous venons de voir par plusieurs autres propriétés qui permettent de changer le comportement de l'image de fond.<br />
+
+background-attachment: fixer le fond<br />
+La propriété CSSbackground-attachmentpermet de « fixer » le fond.<br /> L'effet obtenu est intéressant car on voit alors le texte « glisser » <br />par-dessus le fond. Deux valeurs sont disponibles :<br />
+
+<ul><li>fixed: l'image de fond reste fixe ;</li>
+
+<li>scroll: l'image de fond défile avec le texte (par défaut).</li></ul>
+
+<p>body<br />
+{
+    background-image: url("neige.png");<br />
+    background-attachment: fixed; /* Le fond restera fixe */<br />
+}
+background-repeat: répétition du fond<br />
+Par défaut, l'image de fond est répétée en mosaïque. Vous pouvez <br />changer cela avec la propriétébackground-repeat:<br />
+
+no-repeat: le fond ne sera pas répété. L'image sera donc unique sur la<br /> page.</p>
+
+<ul><li>repeat-x: le fond sera répété uniquement sur la première ligne, horizontalement.</li>
+
+<li>repeat-y: le fond sera répété uniquement sur la première colonne, verticalement.</li>
+
+<li>repeat: le fond sera répété en mosaïque (par défaut).<li></ul><br />
+
+<p>Exemple d'utilisation :<br />
+
+body<br />
+{
+    background-image: url("soleil.png");<br />
+    background-repeat: no-repeat;<br />
+}
+background-position: position du fond<br />
+On peut indiquer où doit se trouver l'image de fond avecbackground-position. Cette propriété n'est intéressante que si elle est combinée avecbackground-repeat: no-repeat;(un fond qui ne se répète pas).<br />
+
+Vous devez donner àbackground-positiondeux valeurs en pixels pour indiquer la position du fond par rapport au coin supérieur gauche de la page (ou du paragraphe, si vous appliquez le fond à un paragraphe). Ainsi, si vous tapez :<br />
+
+background-position: 30px 50px;<br />
+… votre fond sera placé à 30 pixels de la gauche et à 50 pixels du haut. Il est aussi possible d'utiliser ces valeurs en anglais :<br /></p>
+
+<ul><li>
+bottom: en bas ;</li>
+
+<li>left: à gauche ;</li>
+
+<li>center: centré ;</li>
+
+<li>right: à droite.</li></ul><br />
+
+<p>Il est possible de combiner ces mots. Par exemple, pour aligner une image en haut à droite, vous taperez :<br />
+
+background-position: top right;<br />
+Ainsi, si je veux afficher un soleil en image de fond (figure suivante), en un unique exemplaire (no-repeat), toujours visible (fixed) et positionné en haut à droite (top right), je vais écrire ceci :<br /></p>
+
+<p>body</p><br />
+{<br />
+    <ul><li>background-image: url("soleil.png");</li>
+    <li>background-attachment: fixed; /* Le fond restera fixe */</li>
+   <li> background-repeat: no-repeat; /* Le fond ne sera pas répété */</li>
+    <li>background-position: top right; /* Le fond sera placé en haut à droite */</li></ul>
+
+<h3>Combiner les propriétés</h3><br />
+
+<p>Si vous utilisez beaucoup de propriétés en rapport avec le fond (comme c'est le cas sur ce dernier exemple), vous pouvez utiliser une sorte de « super-propriété » appelée back ground dont la valeur peut combiner plusieurs des propriétés vues précédemment :background-image, background-repeat, background-attachment et background-position.</p><br />
+
+<p>On peut donc tout simplement écrire :<br /></p>
+
+<p>body<br />
+{<br />
+    background: url("soleil.png") fixed no-repeat top right;<br />
+}<br />
+C'est la première « super-propriété » que je vous montre, il y en aura d'autres. Il faut savoir que :<br />
+
+L'ordre des valeurs n'a pas d'importance. Vous pouvez combiner les valeurs dans n'importe quel ordre.<br />
+
+Vous n'êtes pas obligés de mettre toutes les valeurs. Ainsi, si vous ne voulez pas écrire fixed, vous pouvez l'enlever sans problème.<br /></p>
+<h3>Plusieurs images de fond</h3>
+<p>Depuis CSS3, il est possible de donner plusieurs images de fond à un élément. Pour cela, il suffit de séparer les déclarations par une virgule, comme ceci :<br />
+
+body<br />
+{<br />
+    background: url("soleil.png") fixed no-repeat top right, <br />url("neige.png") fixed;<br />
+}<br />
+<p><ul><li>On change la couleur du texte avec la propriété color, la couleur de fond avec background-color.</li>
+<li>
+On peut indiquer une couleur en écrivant son nom en anglais (black, par exemple), sous forme hexadécimale (#FFC8D3) ou en notation RGB (rgb(250,25,118)).</li>
+<li>On peut ajouter une image de fond avecbackground-image. On peut choisir de fixer l'image de fond, de l'afficher en mosaïque ou non, et même de la positionner où on veut sur la page.</li>
+
+<li>On peut rendre une portion de la page transparente avec la propriété opacit you avec la notation RGBa (identique à la notation RGB, avec une quatrième valeur indiquant le niveau de transparence).</li></ul>
+<p><ul><li>On peut appliquer une bordure à un élément avec la propriétéborder. Il faut indiquer la largeur de la bordure, sa couleur et son type (trait continu, pointillés…).</li>
+
+<li>On peut arrondir les bordures avecborder-radius.</li>
+
+
+<li>On peut ajouter une ombre aux blocs de texte avecbox-shadow. On doit indiquer le décalage vertical et horizontal de l'ombre, son niveau d'adoucissement et sa couleur.</li>
+
+
+<li>Le texte peut lui aussi avoir une ombre avectext-shadow.</li></ul>
+<p>Nous verrons dans ce chapitre comment changer l'apparence :<br />
+
+<ol><li>au survol ;</li>
+
+<li>lors du clic ;</li>
+
+<li>lors du focus (élément sélectionné) ;</li>
+
+<li>lorsqu'un lien a été consulté.</li></ol>
+
+<h3>Au survol</h3>
+<p>a:hover<br />
+
+{<br />
+
+}<br /></p>
+
+<h3>Au clic et lors de la sélection</h3>
+<p>a:active<br />
+{<br />
+
+    background-color: #FFCC66;<br />
+}<br />
+<p>:focus: lorsque l'élément est sélectionné</p>
+<p>Une fois que vous avez cliqué, le lien reste « sélectionné » (il y a une petite bordure en pointillés autour). C'est cela, la sélection.</p><br />
+<h3>Lorsque le lien a déjà été consulté</h3>
+<p>Il est possible d'appliquer un style à un lien vers une page qui a déjà été vue. Par défaut, le navigateur colore le lien en un violet assez laid (de mon point de vue du moins !).<br />
+
+Vous pouvez changer cette apparence avec:visited (qui signifie « visité »). En pratique, sur les liens consultés, on ne peut pas changer beaucoup de choses à part la couleur (figure suivante).</p><br />
+<h3>En résumé</h3>
+<ul><li>En CSS, on peut modifier l'apparence de certaines sections dynamiquement, après le chargement de la page, lorsque certains évènements se produisent. On utilise pour cela les pseudo-formats.</li>
+<li>Le pseudo-format:hoverpermet de changer l'apparence au survol (par exemple :a:hoverpour modifier l'apparence des liens lorsque la souris pointe dessus).</li>
+
+<li>Le pseudo-format:active modifie l'apparence des liens au moment du clic,:visited lorsqu'un lien a déjà été visité.</li>
+
+<li>Le pseudo-format:focus permet de modifier l'apparence d'un élément sélectionné.</li></ul>
+<h3>Bordures standard</h3>
+<p>Le CSS vous offre un large choix de bordures pour décorer votre page. De nombreuses propriétés CSS vous permettent de modifier l'apparence de vos bordures :border-width, border-color, border-style…<br />
+	<p>La figure suivante vous présente les différents styles de bordures que vous pouvez utiliser.</p>
+	
+<h3>Afficher un lien en gras quand on le survole</h3>
+<p>a:hover <br />
+{<br />
+ font-weight: bold;<br />
+}<br /></p>
+<h3>Les balises structurantes de HTML5</h3>
+<p>&lt;header>: l'en-tête&gt;</p>
+	<p>&lt;footer>: le pied de page&gt;</p>
+<h3>&lt;nav>: principaux liens de navigation&gt;</h3>
+	<p>La balise&lt;nav>&lt;/nav&gt;doit regrouper tous les principaux liens de navigation du site. Vous y placerez par exemple le menu principal de votre site.</p>
+
+<p>&lt;Généralement, le menu est réalisé sous forme de liste à puces à l'intérieur de la balise &lt;nav>:&gt;</p>
+<p>	Plusieurs balises ont été introduites avec HTML5 pour délimiter les différentes zones qui constituent la page web :</p>
+
+<ul><li>&lt;header>: en-tête ;&gt;</li>
+
+<li>&lt;footer>: pied de page ;&gt;</li>
+
+<li>&lt;nav>: liens principaux de navigation ;&gt;</li>
+
+<li>&lt;section>: section de page ;&gt;</li>
+
+<li>&lt;aside>: informations complémentaires ;&gt;</li>
+
+<li>&lt;article>: article indépendant.&gt;</li></ul>
+
+<p>Ces balises peuvent être imbriquées les unes dans les autres. Ainsi, une section peut avoir son propre en-tête.</p><br />
+
+<p>Ces balises ne s'occupent pas de la mise en page. Elles servent seulement à indiquer à l'ordinateur le sens du texte qu'elles contiennent. On pourrait très bien placer l'en-tête en bas de la page si on le souhaite.<br /></p>
+<a id="haut"></a>
+<a href="#haut">haut de page</a>
+
+
+
+
+
+</html>
+

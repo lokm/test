@@ -1,0 +1,47 @@
+h1
+{color: red;
+	font-size: 40px;
+text-align: center;}
+
+@font-face 
+{font-family: 'New Athletic M54';
+src: url('fonts/New Athletic M54.TTF');}
+
+body
+{background-image: url("images/pop.jpg");
+background-attachment: fixed;}
+
+#conteneur
+{display: flex;
+ flex-direction: column;}
+
+h3
+{color:red;
+text-align: center;}
+
+h2
+{color: red;
+text-align: center;}
+
+p
+{color: white;
+text-align: center;}
+
+ul
+{color: white;
+text-align: center;}
+
+ol
+{color: white;
+text-align: center;}
+
+
+p
+{font-family: 'New Athletic M54';}
+
+.element 1
+{color: red;}
+
+a
+{text-align: center;
+display:block;}
